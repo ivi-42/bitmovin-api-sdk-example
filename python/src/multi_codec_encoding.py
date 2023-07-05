@@ -570,12 +570,29 @@ def _create_dash_cmaf_representation(encoding, muxing, dash_manifest, period, se
         segment_path=segment_path
     )
 
-    bitmovin_api.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.create(
-        manifest_id=dash_manifest.id,
-        period_id=period.id,
-        adaptationset_id=adaptation_set_id,
-        dash_cmaf_representation=dash_cmaf_representation
-    )
+    # Create a CMAF muxing
+    cmaf_muxing = CMAFMuxing(streams=[MuxingStream(stream_id=stream.id)],
+                         outputs=[EncodingOutput(output_id=s3_output.id,
+                                                 output_path=output_path)],
+                         segment_length=4,
+                         segment_naming='seg_%number%.m4s',
+                         init_segment_name='init.mp4')
+
+    cmaf_muxing = bitmovin_api.encoding.encodings.muxings.cmaf.create(encoding_id=encoding.id,
+                                                                  cmaf_muxing=cmaf_muxing)
+
+    # Create a DASH CMAF representation
+    dash_cmaf_representation = DashCmafRepresentation(type_=DashRepresentationType.TEMPLATE,
+                                                 encoding_id=encoding.id,
+                                                 muxing_id=cmaf_muxing.id,
+                                                 segment_path=segment_path)
+
+    bitmovin_api.encoding.manifests.dash.periods.adaptationsets.representations.cmaf.create(manifest_id=dash_manifest.id,
+                                                                                        period_id=period.id,
+                                                                                        adaptationset_id=adaptation_set_id,
+                                                                                        dash_cmaf_representation=dash_cmaf_representation)
+
+
 
 
 def _create_dash_fmp4_representation(encoding, muxing, dash_manifest, period, segment_path, adaptation_set_id):
