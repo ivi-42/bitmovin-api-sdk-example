@@ -9,7 +9,7 @@ from bitmovin_api_sdk import AacAudioConfiguration, AclEntry, AclPermission, \
     DashCmafRepresentation, DashFmp4Representation, DashManifest, DashProfile, DashRepresentationType, \
     DolbyDigitalAudioConfiguration, DolbyDigitalChannelLayout, Encoding, EncodingOutput, Fmp4Muxing, \
     H264VideoConfiguration, H265VideoConfiguration, HlsManifest, HttpInput, Input, MessageType, Muxing, MuxingStream, \
-    Output, Period, PresetConfiguration, S3Output, Status, Stream, StreamInfo, StreamInput, StreamSelectionMode Task, \
+    Output, Period, PresetConfiguration, S3Output, Status, Stream, StreamInfo, StreamInput, StreamSelectionMode, Task, \
     TsMuxing, VideoAdaptationSet, VorbisAudioConfiguration, Vp9VideoConfiguration, WebmMuxing
 
 from common.config_provider import ConfigProvider

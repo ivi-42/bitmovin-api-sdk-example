@@ -1,0 +1,464 @@
+[33mcommit af28ad8d347cfc1390ebfcfd93b7b5b1efa3f1f0[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Georg Fu <38907544+fuetgeo@users.noreply.github.com>
+Date:   Mon Aug 22 17:06:19 2022 +0200
+
+    update readme (#51)
+    
+    * added missing descriptions for DRM configuration parameters
+    
+    * fixed link to HDR conversion Java example
+
+[33mcommit f43a7c046566aad52bbfe832167e27ec336ac8c5[m
+Author: Roland Kersche <roland.kersche@bitmovin.com>
+Date:   Fri Jul 1 08:53:37 2022 +0200
+
+    Added link to community (#50)
+
+[33mcommit 8d6c2ca1db34aaef23ef9cd059f90d17d9499d36[m
+Merge: 8dc4c2a 2f1f14a
+Author: ATrattnig <armin.trattnig@bitmovin.com>
+Date:   Thu Jun 30 16:03:39 2022 +0200
+
+    Merge pull request #49 from bitmovin/feature/RtmpLiveEncoding_LiveAutoShutdownConfiguration
+    
+    LiveAutoShutdownConfiguration for live examples
+
+[33mcommit 2f1f14a19c5b8535601b18fee053a936a89ff79e[m
+Author: ATrattnig <armin.trattnig@bitmovin.com>
+Date:   Wed Jun 29 09:20:42 2022 +0200
+
+    LiveAutoShutdownConfiguration for live examples
+
+[33mcommit 8dc4c2a63175b28aff7ff9f0a9a1a47c49da61ac[m
+Author: Matthias Sperl <47745621+msperl-bit@users.noreply.github.com>
+Date:   Thu Jun 23 11:35:06 2022 +0200
+
+    publish updated examples (#47)
+
+[33mcommit 4089c8fb6b78f4e4dec6d70aaef4742d7935b574[m
+Author: Georg Fu <38907544+fuetgeo@users.noreply.github.com>
+Date:   Thu Jun 2 23:20:10 2022 +0200
+
+    remove outdated version of audio manipulation example that have been moved to java/src/main/java/AudioManipulations (#40)
+
+[33mcommit ef134b86fb062d63e5a16a254286f159cc719570[m
+Author: Georg Fu <38907544+fuetgeo@users.noreply.github.com>
+Date:   Wed Jun 1 14:13:02 2022 +0200
+
+    be more explicit on source stream selection (#43)
+    
+    set 'selectionMode' to AUTO (instead of relying on the default) to be more explicit;
+    do not set 'position' when using selectionMode AUTO as it has no effect;
+    minor improvements regarding creation and naming of codec configurations
+
+[33mcommit 85e07adf85fb2e07732a59a0c073e9e823949695[m
+Merge: 151153b d19f461
+Author: Georg Fu <38907544+fuetgeo@users.noreply.github.com>
+Date:   Wed Jun 1 11:10:20 2022 +0200
+
+    Merge pull request #44 from bitmovin/feature/hdrConversionsFixIdentation
+    
+    fix indentation of HdrConversions.java and HdrConversions.ts
+
+[33mcommit d19f461e5914c1a9b9ccba89559a322e961e26dc[m
+Author: fuetgeo <georg.fuetsch@bitmovin.com>
+Date:   Tue May 31 15:43:27 2022 +0200
+
+    fix indentation of HdrConversions.java and HdrConversions.ts
+
+[33mcommit 151153b372e7a306bba28a7f5d731ea07068517f[m
+Author: Yunus Akca <yunus.akca@student.tugraz.at>
+Date:   Mon May 9 09:53:56 2022 +0200
+
+    Add speke examples
+
+[33mcommit 887c39a98aa31c1f4e214fe66ae2ddf9fb0e7dbd[m
+Author: Matthias Sperl <47745621+msperl-bit@users.noreply.github.com>
+Date:   Fri Apr 22 12:44:48 2022 +0200
+
+    Add cdn examples (#39)
+
+[33mcommit 152e38b15197e77bc21c38b2252430e4ed078b8a[m
+Author: filipgeorgiana <43571642+filipgeorgiana@users.noreply.github.com>
+Date:   Wed Apr 13 14:00:16 2022 +0200
+
+    Added HDR conversions examples for java, python and javascript. (#38)
+    
+    * Added HDR conversions examples for java, python and javascript.
+    
+    * linked java and JS examples
+
+[33mcommit b35c5d3e2e407615477fb9d26dd81594183db3f4[m
+Author: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+Date:   Thu Feb 24 17:38:52 2022 +0100
+
+    Bump shelljs from 0.8.4 to 0.8.5 in /javascript (#34)
+    
+    Bumps [shelljs](https://github.com/shelljs/shelljs) from 0.8.4 to 0.8.5.
+    - [Release notes](https://github.com/shelljs/shelljs/releases)
+    - [Changelog](https://github.com/shelljs/shelljs/blob/master/CHANGELOG.md)
+    - [Commits](https://github.com/shelljs/shelljs/compare/v0.8.4...v0.8.5)
+    
+    ---
+    updated-dependencies:
+    - dependency-name: shelljs
+      dependency-type: indirect
+    ...
+    
+    Signed-off-by: dependabot[bot] <support@github.com>
+    
+    Co-authored-by: dependabot[bot] <49699333+dependabot[bot]@users.noreply.github.com>
+
+[33mcommit f439ff668a5fcb61543dddf99326b39eb2cb43fc[m
+Author: Philipp Zeppezauer <47241964+pzeppe@users.noreply.github.com>
+Date:   Thu Feb 24 16:48:32 2022 +0100
+
+    Add Audio manipulation examples to readme. (#35)
+
+[33mcommit 2cc2b05b4f3714c4bc46fa4ff5a900e902f4bf62[m
+Author: Philipp Zeppezauer <47241964+pzeppe@users.noreply.github.com>
+Date:   Thu Feb 24 13:45:27 2022 +0100
+
+    Example for channel swapping. (#33)
+
+[33mcommit fbeeaf5213bc379f45ecd0cb6ac44860cb78efdb[m
+Author: Philipp Zeppezauer <47241964+pzeppe@users.noreply.github.com>
+Date:   Thu Feb 24 13:45:20 2022 +0100
+
+    Examples for merging multiple stereo streams and turning them into background audio (#32)
+
+[33mcommit 910aa5d498c3da3e640f4278025b70e9bf661b57[m
+Author: Philipp Zeppezauer <47241964+pzeppe@users.noreply.github.com>
+Date:   Thu Feb 24 13:45:11 2022 +0100
+
+    Examples for mixing audio channels. (#31)
+
+[33mcommit 5d3902f61bc22e8451264b09a22e5891acb6eff4[m
+Author: Philipp Zeppezauer <47241964+pzeppe@users.noreply.github.com>
+Date:   Thu Feb 24 13:45:04 2022 +0100
+
+    Examples mixing multiple mono input tracks. (#30)
+
+[33mcommit d74fb569aea3756d7288cb4f27338664ab01b263[m
+Author: Philipp Zeppezauer <47241964+pzeppe@users.noreply.github.com>
+Date:   Thu Feb 24 13:44:57 2022 +0100
+
+    Examples for simple audio handling for distinct input files. (#29)
+
+[33mcommit d7b42c613029d65f5b5de57795d8b87660f292f2[m
+Author: Philipp Zeppezauer <47241964+pzeppe@users.noreply.github.com>
+Date:   Thu Feb 24 13:44:47 2022 +0100
+
+    Example mapping audio implicitly. (#28)
+
+[33mcommit 7dc9714485875d01eae4dfb4e544879162c84461[m
+Author: Philipp Zeppezauer <47241964+pzeppe@users.noreply.github.com>
+Date:   Thu Feb 24 13:44:38 2022 +0100
+
+    Example concatenating multiple input sources. (#27)
+
+[33mcommit 2457af6d3d17a55c47ae84da2d136246c08d9761[m
+Author: Philipp Zeppezauer <47241964+pzeppe@users.noreply.github.com>
+Date:   Thu Feb 24 13:44:20 2022 +0100
+
+    Use Bitrate ladder for Default Manifest Example. (#26)
+    
+    SDK version update.
+
+[33mcommit 35f95b2e435a8e26b7d1be3fa8d60defbc1fe808[m
+Merge: 13a1a1c bb17bc3
+Author: Philipp Zeppezauer <47241964+pzeppe@users.noreply.github.com>
+Date:   Thu Feb 24 11:04:28 2022 +0100
+
+    Merge pull request #25 from bitmovin/feature/config_provider_audio_manipulation
+    
+    Variables for Audio Manipulation examples added to config providers.
+
+[33mcommit bb17bc3a4967f5a9587681727d69068430a48fed[m
+Author: Philipp Zeppezauer <philipp.zeppezauer@bitmovin.com>
+Date:   Thu Feb 24 10:37:45 2022 +0100
+
+    Variables for Audio Manipulation examples added to config providers.
+
+[33mcommit 13a1a1c2108c06383a263068991adbe32237f2cb[m
+Merge: b2177a5 977c6bb
+Author: Sebastian Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Jul 27 11:31:47 2021 +0200
+
+    Merge pull request #23 from bitmovin/feature/manifest_generator_v2
+    
+    Simplified examples by using the new manifest generator V2
+
+[33mcommit 977c6bb615392562b863596c249bb673884e55f2[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Jul 27 11:30:49 2021 +0200
+
+    Simplified examples by using the new manifest generator V2
+
+[33mcommit b2177a59bbce036ac68ab61465f00cefc9126d9f[m
+Merge: 5fc30b3 0e03331
+Author: Sebastian Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Jul 6 10:15:33 2021 +0200
+
+    Merge pull request #22 from bitmovin/feature/multi_codec_dolby_digital
+    
+    Updated examples to use Dolby Digital instead of AC3
+
+[33mcommit 0e03331596da19ef0e6210f4d2399fdeb87221ba[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Jul 6 10:14:12 2021 +0200
+
+    Updated examples to use Dolby Digital instead of AC3
+
+[33mcommit 5fc30b3624490733226a327ef04d710cacba9b12[m
+Merge: 854dd17 f1e7985
+Author: Sebastian Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Feb 2 11:15:16 2021 +0100
+
+    Merge pull request #16 from bitmovin/feature/audiochannel_tutorial
+    
+    Added tenant org id comments and new audio channel manipulation tutorials
+
+[33mcommit f1e798570fdea09bd8a7b0fc5f6b00a9a5d46e8f[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Feb 2 11:13:41 2021 +0100
+
+    Added tenant org id comments and new audio channel manipulation tutorials
+
+[33mcommit 854dd175764b2bc4174ec2e56505450233d9484a[m
+Merge: a7b0a52 c71316b
+Author: Sebastian Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Wed Jan 13 08:21:18 2021 +0100
+
+    Merge pull request #15 from bitmovin/feature/update_clients_to_1_56_0
+    
+    Updated the API SDKs to v1.56.0
+
+[33mcommit c71316b9e297d08717d0ffc38309399eb5f62f31[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Wed Jan 13 08:12:30 2021 +0100
+
+    Updated the API SDKs to v1.56.0
+
+[33mcommit a7b0a527539bf1ff5f108c1b41b4719c63394425[m
+Merge: 4aadb7d 87d7dc6
+Author: Sebastian Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Wed Jan 13 07:50:02 2021 +0100
+
+    Merge pull request #14 from bitmovin/feature/update_multicodec_example
+    
+    Updated multi-codec examples
+
+[33mcommit 87d7dc6da3484af03b12dcde401fd02054c7f275[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Wed Jan 13 07:49:22 2021 +0100
+
+    Updated multi-codec examples
+
+[33mcommit 4aadb7de8c8727fd8f0a975fb152f97ea3cf9bc5[m
+Merge: 4aa55d4 e058409
+Author: Sebastian Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Aug 18 17:24:40 2020 +0200
+
+    Merge pull request #12 from bitmovin/feature/client_update_multicodec
+    
+    Client update to v1.46.0 / multicodec example / Python cmd line args
+
+[33mcommit e058409b39b344db6462aa4dbed1dc878a7e0e85[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Aug 18 17:21:12 2020 +0200
+
+    New MultiCodecEncodings Java example
+
+[33mcommit 362f178755bf920e68dfdb5f493f07a33995f751[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Aug 18 17:20:49 2020 +0200
+
+    Client update to v1.46.0, code formatting
+
+[33mcommit 4aa55d4094b401f2224efb168381bf3e16b1b647[m
+Merge: 96aa766 31b3386
+Author: Georg Fu <38907544+fuetgeo@users.noreply.github.com>
+Date:   Mon Jun 8 15:39:02 2020 +0200
+
+    Merge pull request #10 from bitmovin/feature/someFixes
+    
+    Feature/some fixes
+
+[33mcommit 31b3386775a124f87a55414e1b96f4f5ae24b9de[m
+Author: fuetgeo <georg.fuetsch@bitmovin.com>
+Date:   Wed Jun 3 17:59:49 2020 +0200
+
+    changed preset to LIVE_STANDARD
+
+[33mcommit 0d8a18d0736598c6cef4558fca99f4c14b39e14a[m
+Author: fuetgeo <georg.fuetsch@bitmovin.com>
+Date:   Wed Jun 3 17:59:30 2020 +0200
+
+    improved description for encoding resource
+
+[33mcommit 96aa766d715cf50462270bc5e7c3b15f8a34f225[m
+Merge: 2258311 b198f3f
+Author: Sebastian Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Apr 21 14:49:16 2020 +0200
+
+    Merge pull request #9 from bitmovin/feature/client_update_php_example
+    
+    Updated clients to 1.39.0 and added PHP examples
+
+[33mcommit b198f3f534e42c77f607b0756f420234d47ee19e[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Apr 21 14:46:53 2020 +0200
+
+    Updated clients to 1.39.0 and added PHP examples
+
+[33mcommit 22583111ff6efb2ef9c738c1af1a286eecc5e2c7[m
+Merge: bfc97b2 bfe8be3
+Author: Sebastian Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Mar 24 14:09:18 2020 +0100
+
+    Merge pull request #8 from bitmovin/feature/dotnet_examples
+    
+    .NET / C# examples
+
+[33mcommit bfe8be38244be1de46fc8838d0db1eec473581d8[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Mar 24 14:07:55 2020 +0100
+
+    Added .NET / C# examples
+
+[33mcommit 88bf981d08c50ef5513372493581e000fe74e109[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Mar 24 14:06:36 2020 +0100
+
+    Added Java tutorial example RedundantRtmpLiveEncoding
+
+[33mcommit 4acef7dfe93fa806189af6f87603e6356985e2f9[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Mar 24 14:05:56 2020 +0100
+
+    Updated the clients to 1.37.0
+
+[33mcommit bfc97b2138716787ffdb954c473fd70fe022981d[m
+Merge: 7062ef7 ba452d6
+Author: Sebastian Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Jan 28 15:43:27 2020 +0100
+
+    Merge pull request #7 from bitmovin/feature/python_examples
+    
+    Added Python examples
+
+[33mcommit ba452d6514a21cfdc2d27979a958d4a8a766e8fb[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Jan 28 11:31:25 2020 +0100
+
+    Updated root Readme.md for Python examples
+
+[33mcommit 573306c7fd008e04d1b6c7af50e13e60d511f496[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Jan 28 11:29:44 2020 +0100
+
+    Added Python examples
+
+[33mcommit 7062ef7c9cd84d156648863ab2e90ed6cd789d16[m
+Merge: 058bd67 4a20db1
+Author: Sebastian Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Jan 21 08:43:56 2020 +0100
+
+    Merge pull request #6 from bitmovin/feature/update_to_1_32_and_new_tutorial
+    
+    Update clients to v1.32.0 and new Java tutorial
+
+[33mcommit 4a20db1a845d1acfafe755f863ea006aaae4fbb9[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Jan 21 08:42:40 2020 +0100
+
+    Added new Java tutorial FixedBitrateLadderWithRoleBasedS3
+
+[33mcommit c74a7f3c95c55288f9321d409845a42e36b4a4e6[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Tue Jan 21 08:42:17 2020 +0100
+
+    Update clients to v1.32.0
+
+[33mcommit 058bd67d3902a0ff133f74e02865c4e690a4972c[m
+Merge: 6de58c9 664a771
+Author: Sebastian Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Wed Nov 27 17:46:23 2019 +0100
+
+    Merge pull request #5 from bitmovin/feature/client_update_and_some_improvements
+    
+    Client update to v1.29.0 and some improvements
+
+[33mcommit 664a7715a4eac1bc21783e4f928dce8271875722[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Wed Nov 27 17:45:10 2019 +0100
+
+    Client update to v1.29.0 and some improvements
+
+[33mcommit 6de58c92de4daf5a67104c6f8de1c7e44c2bf970[m
+Merge: e15ba14 5fb6cda
+Author: Peter Petraník <peter.petranik@bitmovin.com>
+Date:   Thu Oct 10 14:21:52 2019 +0200
+
+    Merge pull request #4 from bitmovin/feature/gitignore-update
+    
+    feature/gitignore-update
+
+[33mcommit 5fb6cdac1863a7642cdec1dcec0e8c22d960c88d[m
+Author: Peter Petraník <peter.petranik@bitmovin.com>
+Date:   Thu Oct 10 14:11:49 2019 +0200
+
+    add IntelliJ IDE stuff
+
+[33mcommit e15ba14d07e8e67a2732dcc9243c1318602bce2b[m
+Merge: c6e3450 a9cf24f
+Author: Sebastian Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Mon Sep 30 17:02:32 2019 +0200
+
+    Merge pull request #3 from bitmovin/feature/change_default_preset
+    
+    Changed used codec config preset to VOD_STANDARD
+
+[33mcommit a9cf24f4c7bd5cdbe8b27d4a55e2a776f4407ea0[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Mon Sep 30 17:01:31 2019 +0200
+
+    Changed used codec config preset to VOD_STANDARD
+
+[33mcommit c6e3450bcef6be9266e70dd2e273fd1af05f0a1c[m
+Merge: 11c5137 3fb2c0a
+Author: Sebastian Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Thu Sep 26 16:50:01 2019 +0200
+
+    Merge pull request #2 from bitmovin/feature/js_ts_examples
+    
+    Added JS/TS examples, updated Readme headers
+
+[33mcommit 3fb2c0a8cf30e4f6732d6e99e07cc62c00d4e251[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Thu Sep 26 16:47:58 2019 +0200
+
+    Added JS/TS examples, updated Readme headers
+
+[33mcommit 11c5137c61764e8e88826a84e54008ebb55acae1[m
+Merge: 4945630 bc5a13f
+Author: Sebastian Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Mon Sep 9 18:30:58 2019 +0200
+
+    Merge pull request #1 from bitmovin/fixFairplayConfigurationNotUsed
+    
+    fixed CencFairPlay configuration being created but not added to parent object
+
+[33mcommit bc5a13f52a349db880bf040b66babb0017c4a207[m
+Author: fuetgeo <georg.fuetsch@bitmovin.com>
+Date:   Mon Sep 9 15:47:40 2019 +0200
+
+    fixed CencFairPlay configuration being created but not added to parent object
+    shortened variable names
+
+[33mcommit 4945630f333f9250f5085554339942f2d90c5c23[m
+Author: Seb Burgstaller <sebastian.burgstaller@bitmovin.com>
+Date:   Fri Aug 16 12:29:05 2019 +0200
+
+    Added landing pages and
