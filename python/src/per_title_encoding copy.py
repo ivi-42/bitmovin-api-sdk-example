@@ -3,18 +3,21 @@ from os import path
 import retry
 
 
+import logging
 
-#Make sure host is not empty and create the input with the provided host
+logging.basicConfig(level=logging.INFO)  # configure logging
+
 @retry.retry(Exception, tries=3, delay=2, backoff=2)
 def _create_http_input(host):
     if not host:
-        print("Invalid host provided.")
+        logging.error("Invalid host provided.")
         return None
+
     try:
         http_input = HttpInput(host=host)
         return bitmovin_api.encoding.inputs.http.create(http_input=http_input)
     except Exception as e:
-        print(f"Failed to create HTTP input: {e}")
+        logging.error(f"Failed to create HTTP input: {e}")
         raise
 
 
