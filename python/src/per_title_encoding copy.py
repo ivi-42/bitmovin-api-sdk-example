@@ -1,5 +1,24 @@
 import time
 from os import path
+import retry
+
+
+
+#Make sure host is not empty and create the input with the provided host
+@retry.retry(Exception, tries=3, delay=2, backoff=2)
+def _create_http_input(host):
+    if not host:
+        print("Invalid host provided.")
+        return None
+    try:
+        http_input = HttpInput(host=host)
+        return bitmovin_api.encoding.inputs.http.create(http_input=http_input)
+    except Exception as e:
+        print(f"Failed to create HTTP input: {e}")
+        raise
+
+
+
 
 from bitmovin_api_sdk import AacAudioConfiguration, AclEntry, AclPermission, AutoRepresentation, \
     BitmovinApi, BitmovinApiLogger, CodecConfiguration, DashManifest, DashManifestDefault, \
