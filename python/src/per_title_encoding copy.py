@@ -154,51 +154,40 @@ def main():
         start_encoding_request=start_encoding_request
     )
 
+    
 
+@retry.retry(Exception, tries=3, delay=2, backoff=2)
 def _execute_encoding(encoding, start_encoding_request):
-    # type: (Encoding, StartEncodingRequest) -> None
-    """
-    Starts the actual encoding process and periodically polls its status until it reaches a final state
+    try:
+        bitmovin_api.encoding.encodings.start(encoding_id=encoding.id,
+                                              start_encoding_request=start_encoding_request)
 
-    <p>API endpoints:
-    https://bitmovin.com/docs/encoding/api-reference/all#/Encoding/PostEncodingEncodingsStartByEncodingId
-    https://bitmovin.com/docs/encoding/api-reference/sections/encodings#/Encoding/GetEncodingEncodingsStatusByEncodingId
-
-    <p>Please note that you can also use our webhooks API instead of polling the status. For more
-    information consult the API spec:
-    https://bitmovin.com/docs/encoding/api-reference/sections/notifications-webhooks
-
-    :param encoding: The encoding to be started
-    :param start_encoding_request: The request object to be sent with the start call
-    """
-
-    bitmovin_api.encoding.encodings.start(encoding_id=encoding.id,
-                                          start_encoding_request=start_encoding_request)
-
-    task = _wait_for_enoding_to_finish(encoding_id=encoding.id)
-
-    while task.status is not Status.FINISHED and task.status is not Status.ERROR:
         task = _wait_for_enoding_to_finish(encoding_id=encoding.id)
 
-    if task.status is Status.ERROR:
-        _log_task_errors(task=task)
-        raise Exception("Encoding failed")
+        while task.status is not Status.FINISHED and task.status is not Status.ERROR:
+            task = _wait_for_enoding_to_finish(encoding_id=encoding.id)
 
-    print("Encoding finished successfully")
+        if task.status is Status.ERROR:
+            _log_task_errors(task=task)
+            logging.error("Encoding failed with error: {}".format(task.messages))
+        else:
+            logging.info("Encoding finished successfully")
+            
+    except Exception as e:
+        logging.error(f"Failed to start encoding: {e}")
+        raise
 
-
+@retry.retry(Exception, tries=3, delay=2, backoff=2)
 def _wait_for_enoding_to_finish(encoding_id):
-    # type: (str) -> Task
-    """
-    Waits five second and retrieves afterwards the status of the given encoding id
+    try:
+        time.sleep(5)
+        task = bitmovin_api.encoding.encodings.status(encoding_id=encoding_id)
+        logging.info("Encoding status is {} (progress: {} %)".format(task.status, task.progress))
+        return task
+    except Exception as e:
+        logging.error(f"Failed to fetch encoding status: {e}")
+        raise
 
-    :param encoding_id The encoding which should be checked
-    """
-
-    time.sleep(5)
-    task = bitmovin_api.encoding.encodings.status(encoding_id=encoding_id)
-    print("Encoding status is {} (progress: {} %)".format(task.status, task.progress))
-    return task
 
 
 def _create_encoding(name, description):
